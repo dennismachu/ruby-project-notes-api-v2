@@ -178,3 +178,14 @@ test:
         read:
           mode: :primary
         max_pool_size: 1
+
+production:
+  clients:
+    default:
+      database: ruby_notes_api_production
+      hosts:
+        - <%= ENV.fetch("DATABASE") %>
+      options:
+        read:
+          mode: :primary
+        max_pool_size: 1
