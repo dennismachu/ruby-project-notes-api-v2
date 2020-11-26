@@ -189,5 +189,5 @@ production:
         read:
           mode: :primary
         max_pool_size: 1
-        user: <%= ENV.fetch("DB_USER") %>
-        password: <%= ENV.fetch("DB_PASSWORD") %>
+        # user: <%= ENV.fetch("DB_USER") %>
+        # password: <%= ENV.fetch("DB_PASSWORD") %>
