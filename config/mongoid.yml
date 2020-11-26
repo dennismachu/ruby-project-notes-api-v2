@@ -184,8 +184,10 @@ production:
     default:
       database: ruby_notes_api_production
       hosts:
-        - <%= ENV.fetch("DATABASE") %>
+        uri: <%= ENV.fetch("DATABASE") %>
       options:
         read:
           mode: :primary
         max_pool_size: 1
+        user: <%= ENV.fetch("DB_USER") %>
+        password: <%= ENV.fetch("DB_PASSWORD") %>
