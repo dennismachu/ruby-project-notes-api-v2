@@ -4,4 +4,7 @@ class User
   field :username, type: String
   field :email, type: String
   field :password, type: String
+
+  # Relationship
+  has_many :notes
 end
